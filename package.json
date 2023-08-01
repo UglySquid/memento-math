@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^13.4.12",
+    "@react-three/drei": "^9.80.0",
+    "@splinetool/loader": "^0.9.409",
+    "@splinetool/r3f-spline": "^1.0.2",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.409",
     "@types/node": "20.4.5",
@@ -19,6 +23,7 @@
     "next": "13.4.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "three": "^0.155.0",
     "typescript": "5.1.6"
   },
   "devDependencies": {

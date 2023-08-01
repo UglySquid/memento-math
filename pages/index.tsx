@@ -1,8 +1,5 @@
 import { useRef } from 'react';
 import Spline from '@splinetool/react-spline';
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const spline = useRef();
