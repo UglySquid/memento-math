@@ -17,11 +17,15 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #FFDD99;
+  color: #A88D5F;
+}
+
+p {
+  font-family:'Ubuntu';
+}
+
+h2 {
+  font-family: 'Bagel Fat One';
+  font-size: 50px;
 }
