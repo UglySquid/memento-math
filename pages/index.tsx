@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import Spline from '@splinetool/react-spline';
-import PerfectSqure from './main.js'
+import PerfectSquare from './SquareUp'
 
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
       <div className="w-400 h-400 sticky-right-1">
         <h2> MEMENTO        MATH </h2>
         {currentQuestion <= 100 ? (
-          <PerfectSqure number={currentQuestion} onNextQuestion={handleNextQuestion} />
+          <PerfectSquare number={currentQuestion} onNextQuestion={handleNextQuestion} />
         ) : (
           <p>Congratulations, you've squared all numbers!</p>
         )}
