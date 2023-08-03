@@ -1,37 +1,17 @@
 import { useRef, useState } from 'react';
 import Spline from '@splinetool/react-spline';
-
-// function getNumber() {
-//   for (let num = 1; num < 100; num++) {
-//     return num 
-//   }
-// }
-
-// const CARDS = [
-//   {
-//     id: 1,
-//     question: 1^2,
-//     answer: Math.sqrt(1)
-//   },
-//   {
-//     id: 2,
-//     question: 2^2,
-//     answer: Math.sqrt(2)
-//   },
-//   {
-//     id: 3,
-//     question: 3^2,
-//     answer: Math.sqrt(3)
-//   },
-//   {
-//     id: 4,
-//     question: 4^2,
-//     answer: Math.sqrt(4)
-//   },
-// ]
+import PerfectSqure from './main.js'
 
 
 export default function Home() {
+  const [currentQuestion, setCurrentQuestion] = useState(1);
+
+  const handleNextQuestion = () => {
+    if (currentQuestion < 100) {
+      setCurrentQuestion(currentQuestion + 1);
+    }
+  };
+
   const spline = useRef();
   return (
     <div className="w-full h-screen flex items-center">
@@ -39,11 +19,12 @@ export default function Home() {
         <Spline scene="https://prod.spline.design/Ua2HUg78cBXl4bT8/scene.splinecode" />
       </div>
       <div className="w-400 h-400 sticky-right-1">
-        <h2> MEMENTO MATH </h2>
-        <p>
-          Perfect square:
-
-        </p>
+        <h2> MEMENTO        MATH </h2>
+        {currentQuestion <= 100 ? (
+          <PerfectSqure number={currentQuestion} onNextQuestion={handleNextQuestion} />
+        ) : (
+          <p>Congratulations, you've squared all numbers!</p>
+        )}
         {/* <kbd className="kbd">Enter</kbd> */}
       </div>
     </div>
