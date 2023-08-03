@@ -19,7 +19,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const handleKeyPress = (e) => {
+    const handleKeyPress = (e: any) => {
       if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowRight') {
         e.preventDefault(); // Prevent default behavior of arrow keys
         if (e.key === 'ArrowUp') {
@@ -55,7 +55,7 @@ export default function Home() {
           onPreviousQuestion={handlePreviousQuestion}
         />
       ) : (
-        <p>Congratulations, you've squared up all numbers!</p>
+        <p>All squared up!</p>
       )}
         
         {/* <kbd className="kbd">Enter</kbd> */}
